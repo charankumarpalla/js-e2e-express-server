@@ -43,3 +43,14 @@ jobs:
         # echo $env
         Get-ChildItem -Path Env:\ | Format-List
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
+      
+      echo "Service URL: $(Outputs.service_url)"
+      
+      echo $(Outputs)
