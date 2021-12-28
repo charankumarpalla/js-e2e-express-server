@@ -3,6 +3,11 @@ resources:
   - repository: self
     type: git
     ref: Terraform-azure-pipelines
+
+variables:
+- name: charanname
+  value: initialValue 
+
 jobs:
 - job: Job_1
   displayName: Create Resource
