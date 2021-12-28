@@ -36,7 +36,7 @@ jobs:
         
         Write-Host "Hello World"
         
-        Write-Host "filesizecounter : " $NAME 
+        Write-Host "filesizecounter : " $(NAME) 
         
         
         # AppService $(TF_OUT_NAME)
