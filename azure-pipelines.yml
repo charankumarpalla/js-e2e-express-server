@@ -2,7 +2,7 @@ resources:
   repositories:
   - repository: self
     type: git
-    ref: teraform
+    ref: Terraform-azure-pipelines
 jobs:
 - job: Job_1
   displayName: Create Resource
@@ -23,14 +23,13 @@ jobs:
       command: plan
       workingDirectory: terraform
       environmentServiceName: e96a6e0d-672e-48cc-a750-83654b010b11
-...
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World"
-      
-      AppService $(TF_OUT_NAME)
-      echo $env
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Write your PowerShell commands here.
+        
+        Write-Host "Hello World"
+        
+        AppService $(TF_OUT_NAME)
+        echo $env
