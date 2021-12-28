@@ -36,6 +36,9 @@ jobs:
         
         Write-Host "Hello World"
         
+        Write-Host "filesizecounter : " $NAME 
+        
+        
         # AppService $(TF_OUT_NAME)
         # echo $env
         Get-ChildItem -Path Env:\ | Format-List
